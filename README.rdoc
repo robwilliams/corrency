@@ -1,0 +1,11 @@
+= Corrency
+
+Useful core extensions for ecommerce applications.
+
+- BigDecimal
+
+BigDecimal.new('10.00').inc_vat => BigDecimal.new("12.00")
+
+More to come though... :)
+
+This project rocks and uses MIT-LICENSE.

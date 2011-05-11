@@ -1,0 +1,2 @@
+module Corrency
+end

@@ -1,0 +1,4 @@
+<h1>A Product</h1>
+
+<span class="price"><%= number_to_currency(@product.price, :unit => '') %></span>
+<span class="price_inc_vat"><%= number_to_currency(@product.price.inc_vat, :unit => '') %></span>

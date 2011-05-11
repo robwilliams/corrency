@@ -3,7 +3,7 @@ module Corrency
   DEFAULT_VAT_RATE = 20.00
   
   class Config
-        
+    
     class << self
       attr_writer :vat_rate
       

@@ -8,8 +8,21 @@ end
 
 require 'rake'
 require 'rake/rdoctask'
-
 require 'rake/testtask'
+
+require 'jeweler'
+Jeweler::Tasks.new do |gem|
+  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+  gem.name = "corrency"
+  gem.homepage = "http://github.com/robwilliams/corrency"
+  gem.license = "MIT"
+  gem.summary = %Q{Adds Ecommerce Extensions to Various Core Libraries}
+  gem.description = %Q{Adds Ecommerce Extensions to Various Core Libraries}
+  gem.email = "rob@r-williams.com"
+  gem.authors = ["Robert Williams"]
+  # dependencies defined in Gemfile
+end
+Jeweler::RubygemsDotOrgTasks.new
 
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'

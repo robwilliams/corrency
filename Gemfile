@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 group :development, :test do
+  gem "rake", "0.8.7"
   gem "capybara", ">= 0.4.0"
   gem "shoulda"
   gem "sqlite3"

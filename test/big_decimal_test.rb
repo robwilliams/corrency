@@ -12,8 +12,30 @@ class BigDecimalTest < ActiveSupport::TestCase
       assert_equal(BigDecimal.new((@bd * (Corrency::Config.vat_rate.to_f / 100 + 1)).to_s), @bd.inc_vat)
     end
     
-    should "return the correct class" do
+    should "return a BigDecimal" do
       assert_equal(BigDecimal, @bd.inc_vat.class)
+    end
+  end
+  
+  context "ex_vat" do
+    
+    should "return the correct total inc vat" do
+      assert_equal(BigDecimal.new((@bd / (Corrency::Config.vat_rate.to_f / 100 + 1)).to_s), @bd.ex_vat)
+    end
+    
+    should "return a BigDecimal" do
+      assert_equal(BigDecimal, @bd.ex_vat.class)
+    end
+  end
+  
+  context "next_ninety_nine" do
+    
+    should "return the next nearest 0.99 decimal" do
+      assert_equal(BigDecimal.new("100.99"), @bd.next_ninety_nine)
+    end
+    
+    should "return a BigDecimal" do
+      assert_equal(BigDecimal, @bd.next_ninety_nine.class)
     end
   end
   

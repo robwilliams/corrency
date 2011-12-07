@@ -9,7 +9,7 @@ class BigDecimalTest < ActiveSupport::TestCase
   context "inc_vat" do
     
     should "return the correct total inc vat" do
-      assert_equal(BigDecimal.new((@bd * (Corrency::Config.vat_rate.to_f / 100 + 1)).to_s), @bd.inc_vat)
+      assert_equal(BigDecimal.new((@bd * (Corrency::Config.vat_rate.to_f / 100 + 1)).to_s).to_s, @bd.inc_vat.to_s)
     end
     
     should "return a BigDecimal" do

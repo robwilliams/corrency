@@ -1,15 +1,14 @@
-# encoding: UTF-8
 require 'rubygems'
 begin
-  require 'bundler/setup'
+  require 'bundler'
 rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+  exit
 end
 
-require 'rake'
-require 'rake/rdoctask'
+#require 'bundler/gem_tasks'
 require 'rake/testtask'
-require "bundler/gem_tasks"
+require 'cucumber/rake/task'
 
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
@@ -18,12 +17,8 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-task :default => :test
+task :default => [:features, :test]
 
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Corrency'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README.rdoc')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "features --format=pretty"
 end

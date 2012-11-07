@@ -1,12 +1,10 @@
-# Corrency (the spelling mistake is intentional)
-
-Useful core extensions for ecommerce applications (especially in the uk).
-
-To set vat rate of corrency set ```Corrency::Config.vat_rate = 20.00``` 
-in config/initializers/corrency.rb (Defaults to 20.00)
+# Corrency - Useful Ecommerce Core extensions
 
 # Usage
+
 ```ruby
+# Configure the VAT rate
+Corrency::Config.vat_rate = 20.00
 
 # Add VAT
 BigDecimal.new('10.00').inc_vat # 12.00

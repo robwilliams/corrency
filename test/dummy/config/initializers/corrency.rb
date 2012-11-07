@@ -1,1 +1,0 @@
-Corrency::Config.vat_rate = 27.00

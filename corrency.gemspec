@@ -19,12 +19,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_development_dependency(%q<capybara>, [">= 0.4.0"])
-  s.add_development_dependency(%q<shoulda>, [">= 0"])
-  s.add_development_dependency(%q<sqlite3>, [">= 0"])
-  s.add_development_dependency(%q<jeweler>, ["~> 1.6.0"])
-  s.add_development_dependency(%q<rcov>, [">= 0"])
-  s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-  s.add_development_dependency(%q<rails>, [">= 3.0.0"])
   # s.add_runtime_dependency "rest-client"
 end

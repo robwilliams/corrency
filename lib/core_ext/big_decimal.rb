@@ -15,6 +15,10 @@ class BigDecimal
     self.ceil - BigDecimal.new("0.01")
   end
     
+  def add_margin(margin)
+    ((self / (100 - margin)) * 100).to_d.round(2)
+  end
+  
   old_to_s = instance_method :to_s
 
   define_method :to_s do |*param|

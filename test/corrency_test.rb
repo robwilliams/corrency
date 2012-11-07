@@ -10,4 +10,8 @@ describe Corrency do
     Corrency::Config.vat_rate = 17.50
     Corrency::Config.vat_rate.must_equal 17.50
   end
+
+  after do
+    Corrency::Config.vat_rate = Corrency::DEFAULT_VAT_RATE
+  end
 end

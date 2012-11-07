@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    corrency (0.2.0)
+    corrency (0.2.1)
 
 GEM
   remote: http://rubygems.org/

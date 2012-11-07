@@ -8,5 +8,5 @@ Given /^I apply a margin of (.+)%$/ do |margin|
 end
 
 Then /^I should have a value of (.+)$/ do |price|
-  assert_equal(BigDecimal.new(price).to_f, @margin.to_f)
+  assert_equal(BigDecimal.new(price).to_s, @margin.to_s)
 end

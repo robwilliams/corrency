@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Corrency::VERSION
   s.authors     = ["Robert Williams"]
   s.email       = ["rob@r-williams.com"]
-  s.homepage    = ""
+  s.homepage    = " "
   s.summary     = %q{Adds Ecommerce Extensions to Various Core Libraries}
   s.description = %q{Adds Ecommerce Extensions to Various Core Libraries it really does}
 

@@ -7,8 +7,18 @@ in config/initializers/corrency.rb (Defaults to 20.00)
 
 # Usage
 ```ruby
-BigDecimal.new('10.00').inc_vat => BigDecimal.new("12.00")
-BigDecimal.new('12.00').ex_vat => BigDecimal.new("10.00")
+
+# Add VAT
+BigDecimal.new('10.00').inc_vat # 12.00
+
+# Remove VAT
+BigDecimal.new('12.00').ex_vat # 10.00
+
+# Roll up to nearest 99p
+BigDecimal.new('12.76').next_ninety_nine # 12.99
+
+# Add 10% Margin
+BigDecimal.new('90.00').add_margin(10.00) # 100.00
 ```
 
 # Copyright

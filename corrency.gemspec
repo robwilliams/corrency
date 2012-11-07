@@ -21,5 +21,4 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "rake"
   s.add_development_dependency "cucumber"
-  s.add_development_dependency "shoulda-context"
 end

@@ -1,5 +1,8 @@
 # Corrency - Useful Ecommerce Core extensions
 
+[![Build
+Status](https://secure.travis-ci.org/robwilliams/corrency.png?branch=master)](https://travis-ci.org/robwilliams/corrency)
+
 # Usage
 
 ```ruby

@@ -18,6 +18,10 @@ class BigDecimal
   def add_margin(margin)
     ((self / (100 - margin)) * 100).to_d.round(2)
   end
+
+  def margin(cost)
+    ((self - BigDecimal.new(cost)) / self) * 100
+  end
   
   old_to_s = instance_method :to_s
 

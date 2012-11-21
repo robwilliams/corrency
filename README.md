@@ -20,6 +20,9 @@ BigDecimal.new('12.76').next_ninety_nine # 12.99
 
 # Add 10% Margin
 BigDecimal.new('90.00').add_margin(10.00) # 100.00
+
+# Calculate Margin
+BigDecimal.new('100.00').margin(90.00) # 10.00
 ```
 
 # Copyright

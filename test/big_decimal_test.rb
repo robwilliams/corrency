@@ -8,17 +8,13 @@ describe BigDecimal do
       @bd = BigDecimal.new('100.3799')
       assert_equal("100.38", BigDecimal.new("100.38000123").to_s)
     end
-
+    
     it "should round to two decimal places if 0" do
       assert_equal "0.00", BigDecimal.new("0").to_s
     end
-
+    
     it "should round to two decimal places if 1.20" do
       assert_equal "1.20", BigDecimal.new("1.2").to_s
-    end
-
-    it "should accept a format override" do
-      assert_equal '31.4159', BigDecimal.new('31.4159265358979').to_s('%.4f')
     end
   end
 end

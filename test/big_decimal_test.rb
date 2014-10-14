@@ -18,7 +18,7 @@ describe BigDecimal do
     end
 
     it "should accept a format override" do
-      assert_equal '31.4159', BigDecimal.new('31.4159265358979').to_s('%.4f')
+      assert_equal '+314 15.926 53', BigDecimal.new('31415.92653').to_s('+3F')
     end
   end
 end

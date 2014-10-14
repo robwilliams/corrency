@@ -1,5 +1,5 @@
-require 'corrency/corrency_mixin'
+require 'corrency/methods'
 
 class Fixnum
-  include CorrencyMixin
+  include Corrency::Methods
 end
